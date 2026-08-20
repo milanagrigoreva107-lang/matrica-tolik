@@ -217,24 +217,10 @@ padding: 20px 0;
 border-radius: 20px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-.page {
-padding: 30px 20px;
-}
-h1 {
-font-size: 2.5em;
-}
-.title-page h1 {
-font-size: 3.5em;
-}
-.title-page .author {
-font-size: 1.2em;
-}
+/* Обновленный стиль для текста внутри блоков */
 .matrix-wrapper svg {
-width: 100%;
+max-width: 100%;
 height: auto;
-}
 }
 
 /* Year Prediction Styling */
@@ -251,17 +237,20 @@ color: var(--accent-blue);
 font-family: 'Montserrat', sans-serif;
 }
 
-.badge {
-display: inline-block;
-background: var(--accent-yellow);
-color: #000;
-padding: 4px 12px;
-border-radius: 30px;
-font-size: 0.8em;
-font-weight: 700;
-letter-spacing: 1px;
+@media (max-width: 768px) {
+.page {
+padding: 30px 20px;
 }
-
+h1 {
+font-size: 2.5em;
+}
+.title-page h1 {
+font-size: 3.5em;
+}
+.title-page .author {
+font-size: 1.2em;
+}
+}
 </style>
 </head>
 <body>
@@ -300,142 +289,118 @@ letter-spacing: 1px;
 <p>Этот метод позволяет увидеть, где находятся ваши сильные стороны, а где — уязвимости и ловушки. Зная свою Матрицу, вы перестаете плыть по течению и начинаете осознанно строить свою реальность, понимая, в чем ваша главная миссия, как наладить денежный поток и какие отношения принесут вам счастье.</p>
 </div>
 
-<!-- СТРАНИЦА 4: МАТРИЦА (SVG) -->
+<!-- СТРАНИЦА 4: МАТРИЦА (УЛУЧШЕННАЯ ИДЕАЛЬНАЯ SVG) -->
 <div class="page">
 <h2 style="text-align: center;">Ваша Матрица Судьбы</h2>
 <div class="matrix-wrapper">
-<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
-<!-- Фон -->
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.05));">
+<!-- Белый фон -->
 <rect width="800" height="800" fill="#ffffff" />
 
 <!-- Основной восьмиугольник -->
-<polygon points="400,50 700,200 750,400 700,600 400,750 100,600 50,400 100,200" fill="none" stroke="#e5e7eb" stroke-width="3" />
+<polygon points="400,50 700,200 750,400 700,600 400,750 100,600 50,400 100,200" fill="none" stroke="#cbd5e1" stroke-width="3" />
 
-<!-- Линии мужского и женского рода (цветные) -->
-<!-- Линия Женского рода (красная) -->
-<line x1="400" y1="400" x2="550" y2="150" stroke="#ef4444" stroke-width="4" stroke-dasharray="10,5" />
-<line x1="400" y1="400" x2="650" y2="350" stroke="#ef4444" stroke-width="4" stroke-dasharray="10,5" />
-<line x1="400" y1="400" x2="550" y2="600" stroke="#ef4444" stroke-width="4" stroke-dasharray="10,5" />
-<text x="480" y="150" fill="#ef4444" font-size="14" font-family="Montserrat, sans-serif" transform="rotate(-45, 480, 150)">линия Женского рода</text>
+<!-- Вспомогательные линии -->
+<line x1="400" y1="50" x2="400" y2="750" stroke="#e2e8f0" stroke-width="2" />
+<line x1="50" y1="400" x2="750" y2="400" stroke="#e2e8f0" stroke-width="2" />
+<line x1="100" y1="200" x2="700" y2="600" stroke="#e2e8f0" stroke-width="2" />
+<line x1="100" y1="600" x2="700" y2="200" stroke="#e2e8f0" stroke-width="2" />
 
+<!-- Круговые тени и заливки -->
+<defs>
+<filter id="shadow1" x="-20%" y="-20%" width="140%" height="140%">
+<feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.2" />
+</filter>
+</defs>
+
+<!-- Линии рода (красивые, с отступом) -->
 <!-- Линия Мужского рода (фиолетовая) -->
-<line x1="400" y1="400" x2="250" y2="150" stroke="#7b2d8b" stroke-width="4" stroke-dasharray="10,5" />
-<line x1="400" y1="400" x2="150" y2="350" stroke="#7b2d8b" stroke-width="4" stroke-dasharray="10,5" />
-<line x1="400" y1="400" x2="250" y2="600" stroke="#7b2d8b" stroke-width="4" stroke-dasharray="10,5" />
-<text x="240" y="180" fill="#7b2d8b" font-size="14" font-family="Montserrat, sans-serif" transform="rotate(45, 240, 180)">линия Мужского рода</text>
+<line x1="400" y1="400" x2="240" y2="140" stroke="#7b2d8b" stroke-width="5" stroke-dasharray="8,6" />
+<line x1="400" y1="400" x2="150" y2="360" stroke="#7b2d8b" stroke-width="5" stroke-dasharray="8,6" />
+<text x="270" y="190" fill="#7b2d8b" font-size="16" font-family="Montserrat, sans-serif" font-weight="bold" transform="rotate(50, 270, 190)">линия Мужского рода</text>
 
-<!-- Вспомогательные линии (серые) -->
-<line x1="400" y1="50" x2="400" y2="750" stroke="#d1d5db" stroke-width="2" />
-<line x1="50" y1="400" x2="750" y2="400" stroke="#d1d5db" stroke-width="2" />
-<line x1="100" y1="200" x2="700" y2="600" stroke="#d1d5db" stroke-width="2" />
-<line x1="100" y1="600" x2="700" y2="200" stroke="#d1d5db" stroke-width="2" />
+<!-- Линия Женского рода (красная) -->
+<line x1="400" y1="400" x2="560" y2="140" stroke="#ef4444" stroke-width="5" stroke-dasharray="8,6" />
+<line x1="400" y1="400" x2="650" y2="360" stroke="#ef4444" stroke-width="5" stroke-dasharray="8,6" />
+<text x="500" y="160" fill="#ef4444" font-size="16" font-family="Montserrat, sans-serif" font-weight="bold" transform="rotate(-50, 500, 160)">линия Женского рода</text>
 
-<!-- Круги (желтый центр) -->
-<!-- Центр 22 -->
-<circle cx="400" cy="400" r="65" fill="#eab308" stroke="#333" stroke-width="2"/>
-<text x="400" y="412" font-size="32" font-weight="bold" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">22</text>
+<!-- Центральный круг (22) -->
+<circle cx="400" cy="400" r="70" fill="#facc15" stroke="#eab308" stroke-width="4" filter="url(#shadow1)"/>
+<text x="400" y="415" font-size="42" font-weight="bold" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#1a1a1a">22</text>
 
-<!-- Верхний сектор -->
-<circle cx="400" cy="120" r="50" fill="#7b2d8b" stroke="#333" stroke-width="2"/>
-<text x="400" y="132" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">4</text>
+<!-- Малые круги вокруг центра -->
+<g stroke="#475569" stroke-width="1.5" fill="#ffffff" filter="url(#shadow1)">
+<circle cx="450" cy="400" r="20" /> <text x="450" y="406" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">3</text>
+<circle cx="350" cy="400" r="20" /> <text x="350" y="406" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">8</text>
+<circle cx="400" cy="350" r="20" /> <text x="400" y="356" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">5</text>
+<circle cx="400" cy="450" r="20" /> <text x="400" y="456" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">20</text>
+<circle cx="370" cy="370" r="20" /> <text x="370" y="376" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">15</text>
+<circle cx="430" cy="370" r="20" /> <text x="430" y="376" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">8</text>
+<circle cx="430" cy="430" r="20" /> <text x="430" y="436" font-size="16" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#000">22</text>
+</g>
 
-<!-- Правый верхний -->
-<circle cx="640" cy="200" r="50" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="640" y="212" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">8</text>
+<!-- ВНЕШНИЕ БОЛЬШИЕ КРУГИ -->
+<!-- Верхний (4) -->
+<circle cx="400" cy="130" r="55" fill="#1e3a8a" stroke="#1e3a8a" stroke-width="3" filter="url(#shadow1)"/>
+<text x="400" y="142" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">4</text>
+<!-- Правый (4) -->
+<circle cx="720" cy="410" r="55" fill="#dc2626" stroke="#dc2626" stroke-width="3" filter="url(#shadow1)"/>
+<text x="720" y="422" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">4</text>
+<!-- Нижний (11) -->
+<circle cx="400" cy="690" r="55" fill="#f43f5e" stroke="#f43f5e" stroke-width="3" filter="url(#shadow1)"/>
+<text x="400" y="702" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">11</text>
+<!-- Левый (3) -->
+<circle cx="80" cy="410" r="55" fill="#6b21a8" stroke="#6b21a8" stroke-width="3" filter="url(#shadow1)"/>
+<text x="80" y="422" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">3</text>
 
-<!-- Правый -->
-<circle cx="720" cy="400" r="50" fill="#ef4444" stroke="#333" stroke-width="2"/>
-<text x="720" y="412" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">4</text>
+<!-- ВНЕШНИЕ БЕЛЫЕ КРУГИ -->
+<!-- Левый верхний (7) -->
+<circle cx="130" cy="190" r="55" fill="#ffffff" stroke="#1e293b" stroke-width="3" filter="url(#shadow1)"/>
+<text x="130" y="202" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">7</text>
+<!-- Правый верхний (8) -->
+<circle cx="670" cy="190" r="55" fill="#ffffff" stroke="#1e293b" stroke-width="3" filter="url(#shadow1)"/>
+<text x="670" y="202" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">8</text>
+<!-- Правый нижний (15) -->
+<circle cx="670" cy="630" r="55" fill="#ffffff" stroke="#1e293b" stroke-width="3" filter="url(#shadow1)"/>
+<text x="670" y="642" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">15</text>
+<!-- Левый нижний (14) -->
+<circle cx="130" cy="630" r="55" fill="#ffffff" stroke="#1e293b" stroke-width="3" filter="url(#shadow1)"/>
+<text x="130" y="642" font-size="30" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">14</text>
 
-<!-- Правый нижний -->
-<circle cx="640" cy="600" r="50" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="640" y="612" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">15</text>
+<!-- ВНУТРЕННИЕ СРЕДНИЕ КРУГИ (МЕНЬШЕГО РАЗМЕРА) -->
+<g filter="url(#shadow1)">
+<!-- Верхний внутренний (3 - Зеленый) -->
+<circle cx="400" cy="255" r="30" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+<text x="400" y="264" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">3</text>
 
-<!-- Нижний -->
-<circle cx="400" cy="680" r="50" fill="#ef4444" stroke="#333" stroke-width="2"/>
-<text x="400" y="692" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">11</text>
+<!-- Правый верхний внутренний (12 - Синий) -->
+<circle cx="550" cy="255" r="30" fill="#2563eb" stroke="#2563eb" stroke-width="2"/>
+<text x="550" y="264" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">12</text>
 
-<!-- Левый нижний -->
-<circle cx="160" cy="600" r="50" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="160" y="612" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">14</text>
+<!-- Правый внутренний (8 - Белый) -->
+<circle cx="600" cy="430" r="30" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+<text x="600" y="439" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">8</text>
 
-<!-- Левый -->
-<circle cx="80" cy="400" r="50" fill="#7b2d8b" stroke="#333" stroke-width="2"/>
-<text x="80" y="412" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">3</text>
+<!-- Правый нижний внутренний (14 - Белый) -->
+<circle cx="540" cy="560" r="30" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+<text x="540" y="569" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">14</text>
 
-<!-- Левый верхний -->
-<circle cx="160" cy="200" r="50" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="160" y="212" font-size="28" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">7</text>
+<!-- Нижний внутренний (6 - Белый) -->
+<circle cx="400" cy="595" r="30" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+<text x="400" y="604" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">6</text>
 
-<!-- Малые круги (верх) -->
-<circle cx="520" cy="160" r="30" fill="#3b82f6" stroke="#333" stroke-width="2"/>
-<text x="520" y="168" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">12</text>
+<!-- Левый нижний внутренний (20 - Белый) -->
+<circle cx="260" cy="560" r="30" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+<text x="260" y="569" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">20</text>
 
-<circle cx="680" cy="300" r="30" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="680" y="308" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">6</text>
+<!-- Левый внутренний (11 - Зеленый) -->
+<circle cx="200" cy="430" r="30" fill="#16a34a" stroke="#16a34a" stroke-width="2"/>
+<text x="200" y="439" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#ffffff">11</text>
 
-<circle cx="680" cy="500" r="30" fill="#f59e0b" stroke="#333" stroke-width="2"/>
-<text x="680" y="508" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">12</text>
-
-<circle cx="520" cy="640" r="30" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="520" y="648" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">20</text>
-
-<circle cx="280" cy="640" r="30" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="280" y="648" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">17</text>
-
-<circle cx="120" cy="500" r="30" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="120" y="508" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">9</text>
-
-<circle cx="120" cy="300" r="30" fill="#3b82f6" stroke="#333" stroke-width="2"/>
-<text x="120" y="308" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">10</text>
-
-<circle cx="280" cy="160" r="30" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="280" y="168" font-size="20" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">15</text>
-
-<!-- Внутренние малые круги -->
-<!-- Верхний -->
-<circle cx="400" cy="280" r="25" fill="#22c55e" stroke="#333" stroke-width="2"/>
-<text x="400" y="287" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">3</text>
-
-<!-- Правый верх -->
-<circle cx="530" cy="280" r="25" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="530" y="287" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">8</text>
-
-<!-- Правый -->
-<circle cx="580" cy="400" r="25" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="580" y="407" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">3</text>
-
-<!-- Правый низ -->
-<circle cx="530" cy="520" r="25" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="530" y="527" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">14</text>
-
-<!-- Левый низ -->
-<circle cx="270" cy="520" r="25" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="270" y="527" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">6</text>
-
-<!-- Левый -->
-<circle cx="220" cy="400" r="25" fill="#22c55e" stroke="#333" stroke-width="2"/>
-<text x="220" y="407" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#fff">11</text>
-
-<!-- Левый верх -->
-<circle cx="270" cy="280" r="25" fill="#fff" stroke="#333" stroke-width="2"/>
-<text x="270" y="287" font-size="18" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">22</text>
-
-<!-- Дополнительные внутренние цифры (как на картинке) -->
-<circle cx="350" cy="390" r="10" fill="#fff" stroke="#333" stroke-width="1"/>
-<text x="350" y="393" font-size="12" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">8</text>
-
-<circle cx="450" cy="420" r="10" fill="#fff" stroke="#333" stroke-width="1"/>
-<text x="450" y="423" font-size="12" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">3</text>
-
-<circle cx="480" cy="480" r="10" fill="#fff" stroke="#333" stroke-width="1"/>
-<text x="480" y="483" font-size="12" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">5</text>
-
-<circle cx="380" cy="460" r="10" fill="#fff" stroke="#333" stroke-width="1"/>
-<text x="380" y="463" font-size="12" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">20</text>
-
-<circle cx="350" cy="420" r="10" fill="#fff" stroke="#333" stroke-width="1"/>
-<text x="350" y="423" font-size="12" font-family="Montserrat, sans-serif" text-anchor="middle" fill="#333">22</text>
+<!-- Левый верхний внутренний (22 - Белый) -->
+<circle cx="260" cy="255" r="30" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+<text x="260" y="264" font-size="20" font-family="Montserrat, sans-serif" font-weight="bold" text-anchor="middle" fill="#1a1a1a">22</text>
+</g>
 </svg>
 </div>
 <p style="text-align: center; font-size: 0.9rem; color: #666; margin-top: 20px;">Центральная схема вашей судьбы. Каждая цифра — это энергия Аркана, влияющая на определенную сферу.</p>
